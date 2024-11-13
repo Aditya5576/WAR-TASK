@@ -10,14 +10,14 @@
       ignore_errors: yes
     
     - name: Remove existing image if present using docker command
-      command: docker rmi addityapatil/projectimage
+      command: docker rmi addityapatil/whatsapp:v1
       ignore_errors: yes
 
     - name: Pull Docker image using docker command
-      command: docker pull addityapatil/projectimage
+      command: docker pull addityapatil/whatsapp:v1
 
     - name: Run Docker container using docker command
-      command: docker run -d -p 8080:8080 --name webapp addityapatil/projectimage
+      command: docker run -d -p 8080:8080 --name webapp addityapatil/whatsapp:v1
 
     - name: Check Docker container status using docker command
       command: docker ps -a
